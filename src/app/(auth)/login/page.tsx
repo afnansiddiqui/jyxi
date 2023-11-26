@@ -4,10 +4,10 @@ import Button from '@/components/ui/Button';
 import { signIn } from 'next-auth/react';
 import { FC, useState } from 'react';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
-interface pageProps {}
 
-const Page: FC<pageProps> = ({}) => {
+const Page: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   async function loginWithGoogle() {
@@ -37,9 +37,11 @@ const Page: FC<pageProps> = ({}) => {
       <div className='w-full flex flex-col items-center max-w-md space-y-8 '>
         <div className='flex flex-col items-center gap-8'>
           <div className='text-5xl font-bold'>
-          <img 
+          <Image 
           src='/Jyxi.png' 
-          alt='Your Logo' 
+          alt='Your Logo'
+          width={200}
+          height={200} 
           style={{ 
           display: 'block',
           maxWidth: '80%',
