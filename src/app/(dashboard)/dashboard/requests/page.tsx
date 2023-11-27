@@ -29,7 +29,7 @@ const page = async () => {
 
     return (
         <main className='pt-8'>
-            <h1 className='font-bold text-5xl mb-8'>Add a Friend</h1>
+            <h1 className='font-bold text-5xl mb-8 text-white'>Add a Friend 🌟</h1>
             <div className='flex flex-col gap-4'>
                 <FriendRequests incomingFriendRequests={incomingFriendRequests}
                     sessionId={session.user.id} 

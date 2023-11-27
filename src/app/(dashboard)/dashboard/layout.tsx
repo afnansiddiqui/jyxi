@@ -59,7 +59,7 @@ const Layout = async ({ children }: LayoutProps) => {
                 />
             </div>
 
-            <div className='hidden md:flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-white bg-black px-6'>
+            <div className='hidden md:flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-black bg-black px-6'>
                 <Link href='/dashboard' className='flex h-16 shrink-0 items-center'>
                     <div className='text-xl font-bold justify-center text-white'>Jyxi ⚛️ </div>
                 </Link>
@@ -134,7 +134,7 @@ const Layout = async ({ children }: LayoutProps) => {
                 </nav>
             </div>
 
-            <aside className='max-h-screen container py-16 md:py-12 w-full bg-black border-white'>
+            <aside className='max-h-screen container py-16 md:py-12 w-full bg-black border-black'>
                 {children}
             </aside>
         </div>
