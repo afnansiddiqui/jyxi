@@ -5,6 +5,8 @@ import { signIn } from 'next-auth/react';
 import { FC, useState } from 'react';
 import toast from 'react-hot-toast';
 import Image from 'next/image';
+import styles from './page.module.css';
+import { Ghost } from 'lucide-react';
 
 
 const Page: FC = () => {
@@ -23,33 +25,23 @@ const Page: FC = () => {
   }
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-        flexDirection: 'column',
-        backgroundColor: 'black',
-        color: 'white',
-      }}
-    >
+    <div className={styles.gradientBackground}>
       <div className='w-full flex flex-col items-center max-w-md space-y-8 '>
         <div className='flex flex-col items-center gap-8'>
           <div className='text-5xl font-bold'>
-          <Image 
-          src='/Jyxi.png' 
-          alt='Your Logo'
-          width={200}
-          height={200} 
-          style={{ 
-          display: 'block',
-          maxWidth: '80%',
-          maxHeight: "200px",
-          border:"2px solid purple",
-          borderRadius:'50%',
-          margin: '0 auto',
-          }} />
+            <Image
+              src='/Jyxi.png'
+              alt='Your Logo'
+              width={200}
+              height={200}
+              style={{
+                display: 'block',
+                maxWidth: '80%',
+                maxHeight: "200px",
+                border: "2px solid white",
+                borderRadius: '50%',
+                margin: '0 auto',
+              }} />
           </div>
           <h2 className='mt-1 text-center text-3xl font-bold tracking-tight text-white'>
             Sign into your account
@@ -61,6 +53,7 @@ const Page: FC = () => {
           type='button'
           className='max-w-sm w-full'
           onClick={loginWithGoogle}
+          variant="ghost"
         >
           {isLoading ? null : (
             <svg

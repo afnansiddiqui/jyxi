@@ -23,6 +23,8 @@ export const metadata = {
     description: 'Your dashboard',
 }
 
+
+
 const sidebarOptions: SidebarOption[] = [
     {
         id: 1,
@@ -57,13 +59,13 @@ const Layout = async ({ children }: LayoutProps) => {
                 />
             </div>
 
-            <div className='hidden md:flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6'>
+            <div className='hidden md:flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-white bg-black px-6'>
                 <Link href='/dashboard' className='flex h-16 shrink-0 items-center'>
-                    <Icons.Logo className='h-8 w-auto text-indigo-600' />
+                    <div className='text-xl font-bold justify-center text-white'>Jyxi ⚛️ </div>
                 </Link>
 
                 {friends.length > 0 ? (
-                    <div className='text-xs font-semibold leading-6 text-gray-400'>
+                    <div className='text-xs font-semibold leading-6 text-white'>
                         Your chats
                     </div>
                 ) : null}
@@ -74,7 +76,7 @@ const Layout = async ({ children }: LayoutProps) => {
                             <SidebarChatList sessionId={session.user.id} friends={friends} />
                         </li>
                         <li>
-                            <div className='text-xs font-semibold leading-6 text-gray-400'>
+                            <div className='text-xs font-semibold leading-6 text-white'>
                                 Overview
                             </div>
 
@@ -85,8 +87,8 @@ const Layout = async ({ children }: LayoutProps) => {
                                         <li key={option.id}>
                                             <Link
                                                 href={option.href}
-                                                className='text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-3 rounded-md p-2 text-sm leading-6 font-semibold'>
-                                                <span className='text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white'>
+                                                className='text-white hover:text-green-600 hover:bg-transparent group flex gap-3 rounded-md p-2 text-sm leading-6 font-semibold'>
+                                                <span className='text-white border-green-600 group-hover:border-green-600 group-hover:text-green-600 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-black'>
                                                     <Icon className='h-4 w-4' />
                                                 </span>
 
@@ -107,7 +109,7 @@ const Layout = async ({ children }: LayoutProps) => {
 
                         <li className='-mx-6 mt-auto flex items-center'>
                             <div className='flex flex-1 items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900'>
-                                <div className='relative h-8 w-8 bg-gray-50'>
+                                <div className='relative h-8 w-8 bg-black-50'>
                                     <Image
                                         fill
                                         referrerPolicy='no-referrer'
@@ -117,10 +119,10 @@ const Layout = async ({ children }: LayoutProps) => {
                                     />
                                 </div>
 
-                                <span className='sr-only'>Your profile</span>
-                                <div className='flex flex-col'>
+                                <span className='sr-only text-white'>Your profile</span>
+                                <div className='flex flex-col text-white bg-black'>
                                     <span aria-hidden='true'>{session.user.name}</span>
-                                    <span className='text-xs text-zinc-400' aria-hidden='true'>
+                                    <span className='text-xs text-white' aria-hidden='true'>
                                         {session.user.email}
                                     </span>
                                 </div>
@@ -132,7 +134,7 @@ const Layout = async ({ children }: LayoutProps) => {
                 </nav>
             </div>
 
-            <aside className='max-h-screen container py-16 md:py-12 w-full'>
+            <aside className='max-h-screen container py-16 md:py-12 w-full bg-black border-white'>
                 {children}
             </aside>
         </div>
