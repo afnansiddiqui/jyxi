@@ -1,7 +1,8 @@
 Our Errors:
 
-1- Toast notification is comming from bottom
+No Erross
 
 Our Modifications:
 
 1- UI for our dashboard
+2- add favicon.io

@@ -24,7 +24,7 @@ const UnseenChatToast: FC<UnseenChatToastProps> = ({
     <div
       className={cn(
         'max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5',
-        { 'animate-enter': t.visible, 'animate-leave': !t.visible }
+        // { 'animate-enter': t.visible, 'animate-leave': !t.visible }
       )}>
       <a
         onClick={() => toast.dismiss(t.id)}
