@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Transition, Dialog } from '@headlessui/react'
 import { Menu, X } from 'lucide-react'

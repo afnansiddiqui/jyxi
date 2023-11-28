@@ -1,17 +1,21 @@
-import { FC } from 'react'
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import { FC } from 'react';
+import Skeleton from 'react-loading-skeleton';
 
-interface loadingProps {}
+interface LoadingProps { }
 
-const loading: FC<loadingProps> = ({}) => {
+const Loading: FC<LoadingProps> = () => {
+  const skeletonStyle = {
+    backgroundColor: 'black',
+    color: 'black',
+  };
+
   return (
     <div className='w-full flex flex-col gap-3 text-black bg-black'>
-      <Skeleton className='mb-4 text-black bg-black' height={60} width={500} />
-      <Skeleton height={20} width={150} />
-      <Skeleton height={50} width={400} />
+      <Skeleton className='mb-4' height={60} width={500} style={skeletonStyle} />
+      <Skeleton height={20} width={150} style={skeletonStyle} />
+      <Skeleton height={50} width={400} style={skeletonStyle} />
     </div>
-  )
-}
+  );
+};
 
-export default loading
+export default Loading;
